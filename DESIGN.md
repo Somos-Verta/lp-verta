@@ -261,6 +261,18 @@ Fontes: `fontFamily.display = ['Poppins', ...fallback]`, `fontFamily.sans = ['In
 | `verta-horizontal-branca.svg` | símbolo + "verta" | cabeçalho |
 | `verta-principal-branca.svg` | símbolo + "verta" + "ACELERADORA DE RECEITAS" | rodapé |
 | `verta-vertical-branca.svg` | empilhado com tagline | reserva |
-| `verta-simbolo-azul.svg` | só o símbolo, gradiente | favicon, marcador |
+| `verta-simbolo-azul.svg` | só o símbolo, gradiente | marcador |
+| `verta-selo-azul.svg` | selo circular, símbolo `#13008D` sobre disco `#3190FE` | **favicon** |
 
-O símbolo isolado existe e funciona em 32×32 — o favicon sai dele, sem improviso.
+A marca entrega duas versões de selo quadradas (1252×1252), prontas para ícone. O favicon sai do
+`SIMBOLOAZULSELO`, sem reenquadramento: o disco `#3190FE` com o símbolo `#13008D` dá **4,64:1**
+de contraste interno e continua legível em 16px.
+
+A outra versão, `SIMBOLOAZULSELO2`, usa o Verta Blue exato no disco — mas com o símbolo em
+`#3190FE` por cima, o contraste interno cai para **2,17:1** e o ícone vira um borrão nesse
+tamanho. Contra barra de abas escura o problema piora: 2,32:1, contra 5,02:1 do escolhido.
+Divergência aceita de propósito — num ícone de 16px a legibilidade vem antes da fidelidade de
+cor, e os dois arquivos são oficiais da marca.
+
+Os PNG do favicon saem com transparência, para o disco assentar tanto em barra de abas clara
+quanto escura. Só o `apple-touch-icon` leva fundo sólido: o iOS ignora canal alfa.
