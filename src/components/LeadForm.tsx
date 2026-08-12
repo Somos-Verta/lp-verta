@@ -141,7 +141,9 @@ export function LeadForm() {
         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[rgba(61,214,140,0.12)]">
           <Check className="h-7 w-7 text-success" strokeWidth={1.8} aria-hidden="true" />
         </div>
-        <h3 className="font-display text-h3 text-text-strong">Recebemos seus dados</h3>
+        {/* h2 e não h3: dentro do hero o título anterior é o h1, e pular nível reprova
+            na auditoria de ordem de cabeçalho. O tamanho continua o do token h3. */}
+        <h2 className="font-display text-h3 text-text-strong">Recebemos seus dados</h2>
         <p className="max-w-[38ch] text-sm text-text-muted">
           Nossa equipe entra em contato pelo WhatsApp para confirmar o horário da sua reunião
           estratégica.
@@ -157,9 +159,9 @@ export function LeadForm() {
       // A altura mínima acompanha a da tela de sucesso: a troca não pode mexer no layout.
       className="min-h-[560px] rounded-xl border border-line bg-surface p-6 shadow-lg sm:min-h-[620px] sm:p-8"
     >
-      <h3 className="font-display text-h3 text-text-strong">
+      <h2 className="font-display text-h3 text-text-strong">
         Preencha para agendar sua reunião estratégica gratuita
-      </h3>
+      </h2>
 
       <div className="mt-6 space-y-4">
         <Campo
